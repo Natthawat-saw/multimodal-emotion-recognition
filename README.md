@@ -6,6 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Accuracy](https://img.shields.io/badge/Accuracy-68.71%25-brightgreen)]()
 [![F1 Score](https://img.shields.io/badge/Macro%20F1-0.64-brightgreen)]()
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1RJOwhSR4ys_lyKYAapu5tMGGayDCnjvK)
 
 > Multimodal emotion recognition using **Vision Transformer (ViT)** for facial images and **Mamba (SSM)** for speech audio — aligned via **CLIP-style contrastive learning** across independently collected datasets.
 
