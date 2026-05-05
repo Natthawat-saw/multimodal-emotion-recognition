@@ -28,28 +28,7 @@ FER2013 Image [Happy] + RAVDESS Audio [Happy] → Aligned Emotion Representation
 
 ## 🏗️ Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│              Label-Aligned Cross-Dataset Framework           │
-├──────────────────────────┬──────────────────────────────────┤
-│    Visual Pipeline       │      Audio Pipeline              │
-│                          │                                  │
-│  FER2013 Image           │  RAVDESS Speech                  │
-│       ↓                  │       ↓                          │
-│  ViT-B/16 (frozen)       │  Log-Mel Spectrogram (64×300)    │
-│  768-dim features        │       ↓                          │
-│       ↓                  │  Mamba-130M (frozen)             │
-│  Projection Head         │  768-dim features                │
-│  → 256-dim embedding     │       ↓                          │
-│                          │  Projection Head                 │
-│                          │  → 256-dim embedding             │
-├──────────────────────────┴──────────────────────────────────┤
-│            Shared Embedding Space (R²⁵⁶)                    │
-│         CLIP-style Contrastive Alignment                     │
-├─────────────────────────────────────────────────────────────┤
-│    Concatenation [v ; a] → 512-dim → MLP Classifier → 7    │
-└─────────────────────────────────────────────────────────────┘
-```
+![Architecture](https://github.com/user-attachments/assets/52bd082b-df19-46ab-b00d-08feb6597289)
 
 ### Key Design Choices
 
